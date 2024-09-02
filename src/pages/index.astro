@@ -1,6 +1,5 @@
 ---
 import '../styles/tailwind.css';
-
 ---
 
 <html lang="en">
@@ -14,28 +13,44 @@ import '../styles/tailwind.css';
     <!-- Importing Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+          rel="stylesheet">
 
 </head>
-<body class="bg-[#0A0A0A] justify-center flex items-center justify-center min-h-screen font-space-mono text-white">
+<body class="bg-[#000000]  flex items-center justify-center min-h-screen font-space-mono text-white">
 
-<div class=" border border-gray-300 p-6 rounded-lg shadow-lg max-w-max w-full border-solid border-white   ">
-    <div class="border-b border-gray-300 pb-4 mb-4">
-        <h1 class="text-xl font-bold">About Me</h1>
+<div class="bg-[#000000] border  p-6 rounded-lg shadow-lg max-w-4xl w-full border-solid border-white   ">
+    <div class="border-b border-gray-300 pb-4 mb-4 flex justify-between  ">
+        <h1 class=" inline-block text-xl font-bold  ">About Me</h1>
+        <nav class="flex space-x-4 font-bold m-1">
+            <a href="/"> About</a>
+            <a href="/projects"> Projects</a>
+            <a href="/links"> Links</a>
+            <a href="/music"> Music</a>
+            <a href="/contact"> Contact</a>
+
+
+        </nav>
     </div>
-    <div class="flex items-center">
-        <img src="pfp.jpg" alt="Profile Picture" class="w-24 h-24 rounded-full object-cover mr-4">
-        <div>
-            <p class="font-semibold">Snoopz</p>
-            <p class="text-gray-300">He/Him</p>
+    <div class="flex">
+        <div class="flex flex-col ">
+            <img src="pfp.jpg" alt="Jiji the cat" class="w-24 h-24  object-cover max-w-max mr-4">
+            <div>
+                <p class="font-semibold">Snoopz</p>
+                <p class="text-gray-300">He/Him</p>
+            </div>
+        </div>
+        <div class="mt-4">
+            <p>hey there!</p>
+            <p class="mt-2 "> i'm a student in Minneapolis who goes by the name Snoopz online.
+                i'm interested in comp sci, web dev, cyber-sec amongst other topics.
+                i'm passionate about building applications that are both functional and attractive.
+                </p>
+            <p class="mt-2">This site serves as a place for me to create, explore and design. </p>
+
         </div>
     </div>
-    <div class="mt-4">
-        <p>Hi, I'm known as Snoopz online</p>
-        <p class="mt-2">This site is a hub for everything I'm currently working on or interested in.</p>
-        <p class="mt-2">Yes, I know ... Not much to see yet </p>
 
-    </div>
 </div>
 
 </body>
