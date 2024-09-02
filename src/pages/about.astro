@@ -1,15 +1,5 @@
 ---
 
-const pageTitle = "About Me";
-
-const identity = {
-    firstName: "Sarah",
-    country: "Canada",
-    occupation: "Technical Writer",
-    hobbies: ["photography", "birdwatching", "baseball"],
-};
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-
 
 
 ---
@@ -22,19 +12,35 @@ const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 
 </head>
 <body>
-<a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/blog/">Blog</a>
-<h1>About me</h1>
-<h1>{pageTitle}</h1>
-<h2>... and my new Astro site!</h2>
 
-<p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
-<ul>
-    <li> My name is {identity.firstName}.</li>
-    <li>I live in {identity.country} and I work as a {identity.occupation}</li>
-    <li>Two of my hobbies are {identity.hobbies[0]} and {identity.hobbies[1]}</li>
-</ul>
-<p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
+<p id="weather-information"> Current information:   </p>
+
+<script>
+    function addWeatherResult(weatherData) {
+        const element = document.getElementById('weather-information')
+        const textNode = document.createTextNode(JSON.stringify(weatherData, null, 2));
+        element.appendChild(textNode)
+    }
+    function failedRequest(error){
+        console.log(`There was an issue with that call`)
+
+    }
+
+
+    function fetchWeather(){
+         fetch('https://api.tomorrow.io/v4/weather/forecast?location=42.3478,-71.0466&apikey=X8u8pVQWl7OccqplCmwnknXD7lgZ4766')
+            .then(response => {
+                if (!response.ok){
+                    throw new Error('Network response was not ok')
+                }
+                return response.json()
+            })
+             .then(addWeatherResult)
+            .catch(failedRequest)
+    }
+
+    fetchWeather()
+
+</script>
 </body>
 </html>

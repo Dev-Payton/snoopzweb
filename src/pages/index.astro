@@ -1,73 +1,42 @@
 ---
+import '../styles/tailwind.css';
 
 ---
 
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <link rel="icon" type="image/svg+xml" href="/newfav.png"/>
     <meta name="viewport" content="width=device-width"/>
     <meta name="generator" content={Astro.generator}>
-    <title>Astro</title>
+    <title>index • snoopz</title>
 
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: black;
-        }
+    <!-- Importing Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-        .box-wrapper {
-            display: flex;
-            flex-direction: column;
-            width: 750px;
-            height: 250px;
-            align-content: center;
-            justify-content: right;
-            align-items: center;
-            background-color: black;
-            border-style: solid;
-            border-width: 1px;
-            border-color: white;
-        }
-
-        #line {
-            color: white;
-            width: 80%;
-
-
-        }
-
-        .inner-container-bottom {
-            width: 50%;
-            height: 100px;
-            margin: 50px;
-            border-color: white;
-            border-style: solid;
-            border-width: 1px;
-
-        }
-
-
-    </style>
 </head>
-<body>
+<body class="bg-[#0A0A0A] justify-center flex items-center justify-center min-h-screen font-space-mono text-white">
 
-
-<div class="box-wrapper">
-    <div class ="top-container">
+<div class=" border border-gray-300 p-6 rounded-lg shadow-lg max-w-max w-full border-solid border-white   ">
+    <div class="border-b border-gray-300 pb-4 mb-4">
+        <h1 class="text-xl font-bold">About Me</h1>
+    </div>
+    <div class="flex items-center">
+        <img src="pfp.jpg" alt="Profile Picture" class="w-24 h-24 rounded-full object-cover mr-4">
+        <div>
+            <p class="font-semibold">Snoopz</p>
+            <p class="text-gray-300">He/Him</p>
+        </div>
+    </div>
+    <div class="mt-4">
+        <p>Hi, I'm known as Snoopz online</p>
+        <p class="mt-2">This site is a hub for everything Im currently involved in.</p>
+        <p class="mt-2">Yes, I know ... Not much to see yet </p>
 
     </div>
-    <hr id="line">
-<div class="inner-container-bottom">
-
 </div>
-
-</div>
-
 
 </body>
 </html>
