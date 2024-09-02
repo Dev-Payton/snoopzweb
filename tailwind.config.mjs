@@ -5,7 +5,16 @@ export default {
 		extend: {
 			fontFamily: {
 				'space-mono': ['"Space Mono"', 'monospace']
-			}
+			},
+			keyframes: {
+				'custom-bounce': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-25%)' },
+				},
+			},
+			animation: {
+				'bounce-custom': 'custom-bounce 1s ease-in-out 1 forwards',
+			},
 		},
 	},
 	plugins: [],
